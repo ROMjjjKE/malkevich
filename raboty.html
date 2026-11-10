@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Объекты: санузлы, фартуки, полы | Малькевич</title>
+<meta name="description" content="Примеры работ: санузлы крупным форматом, кухонные фартуки, полы, стены после отделки.">
+<meta property="og:title" content="Объекты: санузлы, фартуки, полы | Малькевич">
+<meta property="og:description" content="Примеры работ: санузлы крупным форматом, кухонные фартуки, полы, стены после отделки.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#EFEDE7">
+<style>
+:root{--bg:#EFEDE7;--bg2:#E4E2DA;--ink:#16211E;--ink2:#22322D;--paper:#FAF9F5;
+--em:#1E5C4A;--em2:#2E7A63;--sand:#C8C4B8;--muted:#5C6660;--line:rgba(22,33,30,.15);
+--d:'Fraunces',Georgia,serif;--b:'Golos Text',system-ui,sans-serif;--m:'Space Mono',ui-monospace,monospace;
+--pad:22px;--max:1300px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.62 var(--b);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}h1,h2,h3{margin:0;font-family:var(--d);font-weight:600;line-height:1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}[hidden]{display:none!important}
+.wrap{width:100%;max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.header{position:sticky;top:0;z-index:40;background:rgba(239,237,231,.95);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+.header__in{display:flex;align-items:center;gap:16px;padding:11px 0}
+.logo{display:flex;align-items:center;gap:10px}
+.logo__mark{width:38px;height:38px;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:2px;padding:3px;border:1px solid var(--ink);background:var(--paper)}
+.logo__mark i{display:block;background:var(--em)}
+.logo__mark i:nth-child(2){background:var(--ink)}
+.logo__mark i:nth-child(3){background:var(--sand)}
+.logo__mark i:nth-child(4){background:var(--em)}
+.logo__txt{display:flex;flex-direction:column;line-height:1.15}
+.logo__txt b{font:600 15px/1 var(--d);letter-spacing:-.01em}
+.logo__txt i{font:400 8px/1.5 var(--m);letter-spacing:.09em;text-transform:uppercase;color:var(--muted);font-style:normal}
+.nav{display:flex;gap:14px;margin-left:auto;font:500 12.5px/1 var(--b)}
+.nav a{padding:6px 0;border-bottom:1px solid transparent}
+.nav a:hover,.nav a.is-on{border-color:var(--em);color:var(--em)}
+.header__tel{font:600 13px/1 var(--b);white-space:nowrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 20px;font:600 11.5px/1 var(--b);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--em);background:var(--em);color:#fff;cursor:pointer;transition:.18s}
+.btn:hover{background:#14483A;border-color:#14483A}
+.btn--ink{background:var(--ink);border-color:var(--ink)}
+.btn--ink:hover{background:#000}
+.btn--ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
+.btn--ghost:hover{background:var(--ink);color:#fff}
+.burger{display:none;width:42px;height:36px;border:1px solid var(--ink);background:transparent;align-items:center;justify-content:center;flex-direction:column;gap:4px;cursor:pointer}
+.burger i{display:block;width:16px;height:1px;background:var(--ink)}
+.burger.is-close i:first-child{transform:rotate(45deg) translateY(3px)}
+.burger.is-close i:last-child{transform:rotate(-45deg) translateY(-3px)}
+.drawer{position:fixed;inset:0;z-index:90;background:rgba(14,22,19,.8);display:none}
+.drawer[data-open]{display:block}
+.drawer__in{position:absolute;inset:0 0 0 auto;width:min(400px,92vw);background:var(--bg);padding:18px;overflow-y:auto}
+.drawer__top{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}
+.drawer__nav{display:grid;font:600 21px/1 var(--d)}
+.drawer__nav a{padding:13px 0;border-bottom:1px solid var(--line)}
+.drawer__cta{width:100%;margin-top:16px}
+.drawer__note{font-size:12px;color:var(--muted);margin-top:10px}
+body.is-locked{overflow:hidden}
+.hero{position:relative;min-height:min(94svh,820px);display:flex;align-items:flex-end;overflow:hidden;background:#101614}
+.hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,rgba(9,15,13,.44),rgba(9,15,13,.1) 42%,rgba(9,15,13,.84) 76%,#101614 100%)}
+.hero__in{position:relative;z-index:2;width:100%;padding:clamp(28px,4.6vw,58px) 0 clamp(14px,2vw,22px);color:#F6F4EF}
+.hero h1{font-size:clamp(2.05rem,5.8vw,4.7rem);letter-spacing:-.03em;color:#fff}
+.hero h1 em{font-style:italic;color:#9FD9C0}
+.hero__lede{max-width:44ch;margin:14px 0 18px;color:rgba(246,244,239,.88)}
+.hero__acts{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:clamp(14px,2.2vw,26px)}
+.hero__acts .btn--ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+.hero__acts .btn--ghost:hover{background:#fff;color:var(--ink)}
+.hero__facts{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid rgba(255,255,255,.28);gap:0 12px}
+.hero__facts div{padding:11px 0 0}
+.hero__facts b{display:block;font:600 clamp(1rem,1.6vw,1.25rem)/1.2 var(--d)}
+.hero__facts span{font:400 8.5px/1.5 var(--m);letter-spacing:.08em;text-transform:uppercase;color:#9FD9C0}
+@media (max-width:1024px){.nav{display:none}.burger{display:flex}.header__tel{display:none}.hero__facts{grid-template-columns:1fr 1fr}}
+@media (max-width:380px){.header .btn{display:none}}
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Golos+Text:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.v1.css">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+<header class="header"><div class="header__in wrap">
+<a class="logo" href="index.html"><span class="logo__mark"><i></i><i></i><i></i><i></i></span><span class="logo__txt"><b>Малькевич</b><i>плитка · ремонт</i></span></a>
+<nav class="nav" aria-label="Основное меню"><a href="index.html">Главная</a><a href="uslugi.html">Услуги</a><a href="plitka.html">Плитка</a><a href="remont.html">Ремонт</a><a href="otdelka.html">Отделка</a><a href="raboty.html" class="is-on">Объекты</a><a href="o-mastere.html">О мастере</a><a href="kontakty.html">Контакты</a></nav>
+<a class="header__tel" href="tel:+375296151911">+375 (29) 615-19-11</a>
+<a class="btn" href="#zayavka">Вызвать на замер</a>
+<button class="burger" type="button" aria-label="Меню" aria-expanded="false" aria-controls="drawer"><i></i><i></i><i></i></button>
+</div></header>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Меню" hidden>
+<div class="drawer__in">
+<div class="drawer__top">
+<a class="logo" href="index.html"><span class="logo__mark"><i></i><i></i><i></i><i></i></span><span class="logo__txt"><b>Малькевич</b><i>Минский район</i></span></a>
+<button class="burger is-close" type="button" data-close aria-label="Закрыть меню"><i></i><i></i></button>
+</div>
+<nav class="drawer__nav"><a href="index.html">Главная</a><a href="uslugi.html">Услуги</a><a href="plitka.html">Плитка</a><a href="remont.html">Ремонт</a><a href="otdelka.html">Отделка</a><a href="raboty.html">Объекты</a><a href="o-mastere.html">О мастере</a><a href="kontakty.html">Контакты</a></nav>
+<a class="btn drawer__cta" href="tel:+375296151911">Позвонить +375 (29) 615-19-11</a>
+<p class="drawer__note">Укладка плитки, санузлы под ключ, штукатурка, шпатлёвка, обои, электрика. Ремонт от А до Я. Минская обл., Минский район, опыт 8–10 лет.</p>
+</div></div>
+<main>
+<section class="phero"><img src="assets/img/kitchen.jpg" alt="Фартук" width="1024" height="1024">
+<div class="phero__in"><div class="wrap"><div class="crumbs"><a href="index.html">Главная</a> / Объекты</div>
+<h1>Объекты<br><em>и узлы</em></h1><p>Санузлы, фартуки, полы, стены. Что видно в работе: шов, плоскость, подрезка.</p></div></div></section>
+<div class="grout" aria-hidden="true"><svg viewBox="0 0 1200 38" preserveAspectRatio="none">
+<rect width="1200" height="38" fill="#E4E2DA"/>
+<g stroke="#F6F5F0" stroke-width="2">
+<line x1="0" y1="1" x2="1200" y2="1"/><line x1="0" y1="37" x2="1200" y2="37"/><line x1="0" y1="19" x2="1200" y2="19"/>
+</g>
+<g stroke="#F6F5F0" stroke-width="2">
+<line x1="60" y1="1" x2="60" y2="19"/><line x1="180" y1="1" x2="180" y2="19"/><line x1="300" y1="1" x2="300" y2="19"/>
+<line x1="420" y1="1" x2="420" y2="19"/><line x1="540" y1="1" x2="540" y2="19"/><line x1="660" y1="1" x2="660" y2="19"/>
+<line x1="780" y1="1" x2="780" y2="19"/><line x1="900" y1="1" x2="900" y2="19"/><line x1="1020" y1="1" x2="1020" y2="19"/><line x1="1140" y1="1" x2="1140" y2="19"/>
+</g>
+<g stroke="#F6F5F0" stroke-width="2">
+<line x1="120" y1="19" x2="120" y2="37"/><line x1="240" y1="19" x2="240" y2="37"/><line x1="360" y1="19" x2="360" y2="37"/>
+<line x1="480" y1="19" x2="480" y2="37"/><line x1="600" y1="19" x2="600" y2="37"/><line x1="720" y1="19" x2="720" y2="37"/>
+<line x1="840" y1="19" x2="840" y2="37"/><line x1="960" y1="19" x2="960" y2="37"/><line x1="1080" y1="19" x2="1080" y2="37"/>
+</g></svg></div>
+<section class="section"><div class="wrap">
+<div class="gal">
+<figure class="wide"><img src="assets/img/hero.jpg" alt="Санузел" width="1536" height="1024" loading="lazy"><figcaption>Санузел · крупноформатный керамогранит</figcaption></figure>
+<figure><img src="assets/img/kitchen.jpg" alt="Фартук" width="1024" height="1024" loading="lazy"><figcaption>Кухня · фартук из глазури</figcaption></figure>
+<figure><img src="assets/img/zellige.jpg" alt="Шов" width="1024" height="1024" loading="lazy"><figcaption>Деталь · ровный шов</figcaption></figure>
+<figure><img src="assets/img/laying.jpg" alt="Укладка" width="1024" height="1024" loading="lazy"><figcaption>Процесс · клей и крестики</figcaption></figure>
+<figure><img src="assets/img/walls.jpg" alt="Стены" width="1024" height="1024" loading="lazy"><figcaption>Стены · после отделки</figcaption></figure>
+<figure><img src="assets/img/level.jpg" alt="Уровень" width="1024" height="1024" loading="lazy"><figcaption>Контроль плоскости</figcaption></figure>
+</div>
+<p class="hint" style="margin-top:16px">На фото показаны типы работ. Снимки конкретных объектов присылаю по запросу: чужие квартиры без разрешения не публикую.</p>
+</div></section>
+<section class="section section--dim"><div class="wrap"><div class="two">
+<div class="prose">
+<h3>Что смотрю на объекте</h3>
+<p>Первое — стены и стяжка. Второе — мокрые зоны и разводка. Третье — раскладка: где будут подрезки и как встанет шов относительно люка, вентиляции и углов.</p>
+<p>После этого называю объём и сроки. Так честнее, чем «примерно столько» по телефону, а потом +30% на месте.</p>
+</div>
+<div class="card"><p class="eyebrow">заявка</p><h3 style="margin-bottom:10px">Показать ваш объект</h3><form class="form" id="lead">
+<label>Как вас зовут<input type="text" id="lName" placeholder="Имя" required></label>
+<label>Телефон<input type="tel" id="lTel" placeholder="+375" required></label>
+<div class="row2"><label>Площадь, м²<input type="text" id="lArea" placeholder="18"></label><label>Адрес или район<input type="text" id="lCity" placeholder="Минский район"></label></div>
+<label>Что нужно сделать<textarea id="lTask" placeholder="Санузел 4 м²: плитка на стены и пол, гидроизоляция, установка сантехники."></textarea></label>
+<button class="btn" type="submit">Отправить в WhatsApp</button>
+<p class="hint">Заявка откроется в WhatsApp: прикрепите фото помещения, так я скажу по объёму точнее.</p>
+</form></div>
+</div></div></section>
+<section class="cta"><div class="wrap cta__in"><div><h2>Посмотрите<br><em>вживую</em></h2><p>Если объект рядом, можно посмотреть готовый санузел.</p></div>
+<div class="cta__acts"><a class="btn btn--light" href="https://wa.me/375296151911" target="_blank" rel="noopener">WhatsApp</a><a class="btn btn--light" href="tel:+375296151911">Позвонить</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap">
+<div class="footer__top">
+<div class="footer__about"><a class="logo logo--f" href="index.html"><span class="logo__mark"><i></i><i></i><i></i><i></i></span><span class="logo__txt"><b>Малькевич</b><i>плитка и ремонт</i></span></a>
+<p>ИП Малькевич Михаил Валерьевич. Укладка плитки и ремонт под ключ: штукатурка, электрика, обои, шпатлёвка. Минская обл., Минский район.</p>
+<a class="footer__tel" href="tel:+375296151911">+375 (29) 615-19-11</a>
+</div>
+<div><h4>Разделы</h4><ul><li><a href="index.html">Главная</a></li><li><a href="uslugi.html">Услуги</a></li><li><a href="plitka.html">Плитка</a></li><li><a href="remont.html">Ремонт</a></li><li><a href="otdelka.html">Отделка</a></li><li><a href="raboty.html">Объекты</a></li><li><a href="o-mastere.html">О мастере</a></li><li><a href="kontakty.html">Контакты</a></li></ul></div>
+<div><h4>Работы</h4><ul><li><a href="plitka.html">Укладка плитки</a></li><li><a href="sanuzly.html">Санузел под ключ</a></li><li><a href="otdelka.html">Штукатурка и обои</a></li><li><a href="remont.html">Ремонт под ключ</a></li><li><a href="uslugi.html">Все услуги</a></li></ul></div>
+<div><h4>Связь</h4><ul><li><a href="tel:+375296151911">+375 (29) 615-19-11</a></li><li><a href="https://wa.me/375296151911" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://t.me/+375296151911" target="_blank" rel="noopener">Telegram</a></li><li><a href="https://yandex.by/maps/?text=%D0%9C%D0%B8%D0%BD%D1%81%D0%BA%D0%B8%D0%B9%20%D1%80%D0%B0%D0%B9%D0%BE%D0%BD%20%D1%83%D0%BA%D0%BB%D0%B0%D0%B4%D0%BA%D0%B0%20%D0%BF%D0%BB%D0%B8%D1%82%D0%BA%D0%B8" target="_blank" rel="noopener">Минская обл., Минский район</a></li></ul></div>
+</div>
+<div class="footer__bottom"><span>© <span id="yr">2026</span> ИП Малькевич Михаил Валерьевич</span>
+<span><a href="politika.html">Политика обработки персональных данных</a></span></div>
+</div></footer>
+<div class="mbar" role="navigation" aria-label="Быстрая связь">
+<a href="tel:+375296151911"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.24c1.1.36 2.3.56 3.5.56a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.56 3.5a1 1 0 0 1-.25 1z"/></svg>Позвонить</a>
+<a href="https://wa.me/375296151911" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2m5.3 14.1c-.2.6-1.2 1.2-1.9 1.2-.5 0-1.1 0-2-.4a11 11 0 0 1-4.4-3.9c-.5-.8-.9-1.7-.9-2.5 0-.7.4-1.4.9-1.8.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .5.4l.7 1.6c0 .2 0 .3-.1.5l-.4.5c-.1.2-.2.3 0 .5a8 8 0 0 0 3.4 2.9c.2.1.4.1.5-.1l.6-.7c.1-.2.3-.2.5-.1l1.6.8c.2.1.3.2.3.4s0 .5-.1.9"/></svg>WhatsApp</a>
+<a href="viber://chat?number=%2B375296151911"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C7 2 3 5.6 3 10c0 2.5 1.3 4.7 3.4 6.1L6 21l4-1.6c.6.1 1.3.2 2 .2 5 0 9-3.6 9-8s-4-8-9-8m3.6 11.3c-.4.9-1.9 1.6-2.7 1.5-2.4-.3-4.6-2.1-5.4-4.4-.3-.8.2-2 1-2.4.3-.2.7 0 .9.3l.7 1.2c.1.3 0 .5-.2.7-.3.2-.2.5.1.9.6.8 1.2 1.2 1.9 1.5.4.2.6 0 .8-.2s.4-.3.7-.2l1.3.6c.3.2.3.6.2.9"/></svg>Viber</a>
+<a href="https://t.me/+375296151911" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M21.8 4.2 2.9 11.4c-.9.3-.9 1.5 0 1.8l4.6 1.5 1.7 5.3c.2.7 1 .9 1.5.3l2.5-2.6 4.6 3.4c.6.4 1.4 0 1.5-.7l2.5-15c.1-.8-.6-1.4-1.5-1.2M9.4 14.3l8.4-5.6-6.8 6.6-.2 3z"/></svg>Telegram</a>
+</div>
+<script src="assets/js/main.v1.js"></script>
+</body>
+</html>
